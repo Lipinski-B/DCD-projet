@@ -1,27 +1,50 @@
-# DCD-projet
+## ECD - Projet - Playlists
 
-Dataset : 
-https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks
---> playlists avec les chansons associées (artiste, titre, album etc...) 
+Ce projet porte sur la fouille de données. 
+Les données sont des playlists de spotify récupérer sous format JSON (cf. Rapport pour le format). 1 million de playliste sont représentées dans des sous dossiers JSON de 100 playlists chaqu’un. Ces playlist ont été utilisé pour effectuer un clustering sur les différentes musiques, ainsi que des possible recommandatio basé sur ce que les écoutes personnels.
 
-Gender
-Male: 45%
-Female: 54%
-Unspecified: 0.5%
-Nonbinary: 0.5%
+Structure du projet: 
+``` bash
+├── Script.r
+├── Script.py
+├── utilisation.py
+├── Data
+│   ├── matrice
+│   └── playlistUsyer.json
+└── src
+    └── objectPipelineSklearn
 
-Age
-13-17: 10%
-18-24: 43%
-25-34: 31%
-35-44: 9%
-45-54: 4%
-55+: 3%
+```
+Le projet s'articule en deux temps. 
 
-Country
-US: 100%
+##### 1.Entrainement
+``` bash
+                                           Script.r                             Script.py
+Entrée : Million de playlists (json)  ──────────────────>  Sparse Matrice ──────────────────>  Sortie : modèle(objectPipelineSklearn)
 
-https://www.kaggle.com/sadakathussainfahad/spotify-million-playlist-dataset
---> métadatas 
+```
+Cette partie à déjà été traité et le fichier de sortie se trouve dans le dossier src du projet. 
 
-Objectif : réaliser un clustering de retrouver un motif récurant dans la consitution de la playlist afin de pouvoir créer une nouvelle playlist ou ajouter une nouvelle musique basée sur les goûts de l'utilisateur (recommandation).
+##### 2.Utilisation
+
+``` bash
+                                      Utilisation.py                           
+Entrée : playlistUser.json (json)  ──────────────────>   Sortie : recommandation.json ? 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
