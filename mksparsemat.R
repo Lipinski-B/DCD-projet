@@ -2,6 +2,9 @@ library(jsonlite)
 library(doParallel)
 library(reticulate)
 
+# generate sparse matrix for all playlists by unique track.
+# 1e6 playlists (rows) by approx. 2.6e6 tracks.
+
 # so why generate python objects from R?  because R does
 # python better than python.  python sucks.  fight me.
 # numpy favors low memory over performance, because of which
