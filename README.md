@@ -36,6 +36,7 @@ Cette partie permets la mise en place d'une recomandation basé sur le jeux de d
 En entrée on attend un fichier Json d'une ou plusieurs playlists utilisateur désireux d'avoir des recommandations musical basé sur ces musiques. 
 Un fichier test (playlistUser.json) a été placé dans ce projet, mais il est possible d'utilisé votre propore playlist si celle-ci est sous la forme suivante : 
 
+``` bash
 {
   "items": [
     {
@@ -53,10 +54,12 @@ Un fichier test (playlistUser.json) a été placé dans ce projet, mais il est p
         "name": "",
         "uri": ""
       }}]}
+   
+   ```
       
 Les uri référencent respectivement l'album_uri, artists_uri et track_uri de spotify.
  
-Si une playlist Spotify est déjà existante il est possible d'extraire celle-ci facilment via l'API Spotify. Un exemple de ce qui peut être fait pour récupérer les données a été inséré dans le projet (todo dire ou quoi ...).
+Si une playlist Spotify est déjà existante il est possible d'extraire celle-ci facilment via l'API Spotify. Un exemple de ce qui peut être fait pour récupérer les données a été ajouter dans le projet : API_Spotify.ipynb. Ce script permets de récupérer ses propres playlistes Spotify en indiquant son client_id et client_secret à récupérer sur spotify.Il donne en sortie le fichier Json déjà bien parsé pour être directement intégré au script utilisation.py pour effectuer une recommandation.
 
-A la sortie du script un fichier indiquant les premieres recommandations basé sur les musiques existantent du dataset de départ seront fournie par le biai d'un fichier de sortie. 
+A la sortie du script utilisation.py un fichier indiquant les premieres recommandations basé sur les musiques existantent du dataset de départ seront fournie par le biai d'un fichier de sortie. 
     
